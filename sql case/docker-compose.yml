@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    restart: always
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3307:3306
+    container_name: testCase_mysql #This can also be used but I always prefer using aliases
+    environment:
+      # Пароль к БД
+      MYSQL_ROOT_PASSWORD: Passw0rd_kartoteka
+      # Создаваемая по умолчанию бд
+      MYSQL_DATABASE: kartoteka_db

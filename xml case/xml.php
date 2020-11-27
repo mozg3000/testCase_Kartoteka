@@ -1,10 +1,10 @@
 <?php
-
-$xml = simplexml_load_file ('./test.xml');
-// print_r($xml->MessageInfo->Auction->LotTable);
- print_r(extractArrayDataFromXml($xml));
-//*
-// extractLotsData($xml);
+try{
+	$xml = simplexml_load_file ('./test.xml');
+	print_r(extractArrayDataFromXml($xml));
+}catch(Trowable $e){
+	echo $e->getMessage();
+}
 
 function extractArrayDataFromXml(SimpleXMLElement $xml):array{
 	$id = (int)extractBankruptId($xml);

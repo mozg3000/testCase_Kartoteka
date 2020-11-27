@@ -4,10 +4,13 @@ use utiles\MyNumber;
 use services\RecieptService;
 use models\Reciept;
 /*
+// Задание 1
 $number = new MyNumber(1109);
 if($number->isSimple())print_r('yes');
 else print_r('no');
 */
+
+//Задание 2
 $recieptService = new RecieptService();
 $dataArray = [
 	'totalPrice' => 3627,
