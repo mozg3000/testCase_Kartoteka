@@ -40,7 +40,7 @@
 Находится в папке xml case в файле xml.php
 
 
-MySQL
+**MySQL**
 
 
 Задание 1
@@ -57,23 +57,28 @@ MySQL
 без join
 
 
+```sql
 select users.name, offices.name as office from users, offices where office_id=offices.id;
+```
 
 
 с join
 
-
+```sql
  select users.name, offices.name as office from users left join offices on office_id=offices.id;
- 
+ ```
  
 Задание 3
 Выведите названия офисов, в котором сидят больше, чем один пользователь
 
-
+```sql
 select offices.name,  count(*) as num from users left join offices on office_id=offices.id group by offices.name having num>1;
+```
 
 
-JS
+
+
+**JS**
 
 
 Задание 1
